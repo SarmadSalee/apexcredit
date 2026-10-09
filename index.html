@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Credit Repair - Rebuild Your Financial Future & Boost Your Score</title>
+    <meta name="description" content="Professional credit repair services to dispute negative items, raise your credit score, and unlock better loans and financial freedom. Free Credit Audit included!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span><i class="fa-solid fa-shield-halved"></i> 100% FCRA Compliant • 90-Day Money Back Guarantee</span>
+            <div class="top-contact">
+                <a href="tel:18005550199"><i class="fa-solid fa-phone"></i> (800) 555-0199</a>
+                <span class="hours"><i class="fa-regular fa-clock"></i> Mon-Fri: 8am - 8pm EST</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <span class="logo-text">APEX<span>CREDIT</span></span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#simulator">Score Simulator</a>
+                <a href="#portfolio">Our Portfolio</a>
+                <a href="#reviews">Success Stories</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#lead-form-section" class="btn btn-primary nav-cta">Free Credit Audit</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Lead Capture Form -->
+    <section class="hero-section" id="lead-form-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-pill">
+                    <i class="fa-solid fa-star"></i> Rated #1 Credit Repair Service of 2026
+                </div>
+                <h1>Take Control of Your Credit Score & Unlock Your Dreams</h1>
+                <p class="hero-subtext">
+                    We eliminate unfair negative items, collections, late payments, and bankruptcies from your report legally and effectively. Average score increase of 115+ points in 90 days.
+                </p>
+                
+                <div class="trust-checkmarks">
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> No Upfront Consultation Fees</div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> Fast 30-45 Day Results</div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> Dedicated Credit Attorney Team</div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">50K+</span>
+                        <span class="stat-label">Clients Helped</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">115+</span>
+                        <span class="stat-label">Avg. Point Boost</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">98.4%</span>
+                        <span class="stat-label">Dispute Success Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Capture Form Component -->
+            <div class="hero-form-card">
+                <div class="form-header">
+                    <h3>Get Your Free Credit Analysis</h3>
+                    <p>Includes free 1-on-1 consultation & customized dispute plan ($199 Value — FREE)</p>
+                </div>
+
+                <form id="leadCaptureForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="fullName" placeholder="e.g. Michael Scott" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <div class="input-icon-wrapper">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input type="email" id="email" placeholder="name@domain.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <div class="input-icon-wrapper">
+                                <i class="fa-solid fa-phone-flip"></i>
+                                <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="creditGoal">What is your primary financial goal?</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <select id="creditGoal">
+                                <option value="home">Buy a New Home / Mortgage Approval</option>
+                                <option value="auto">Auto Loan & Better Rates</option>
+                                <option value="card">Qualify for Premium Credit Cards</option>
+                                <option value="business">Business Financing & Capital</option>
+                                <option value="clean">Remove Negatives & Fix Error</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estimatedScore">Estimated Current Credit Score</label>
+                        <select id="estimatedScore">
+                            <option value="under500">Under 500 (Needs Urgent Help)</option>
+                            <option value="500-599">500 - 599 (Poor Credit)</option>
+                            <option value="600-669">600 - 669 (Fair Credit)</option>
+                            <option value="670plus">670+ (Looking for Optimization)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <span>Get Free Consultation Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="form-footer-security">
+                        <span><i class="fa-solid fa-lock"></i> 256-Bit SSL Encrypted</span>
+                        <span><i class="fa-solid fa-user-shield"></i> No Spam Guarantee</span>
+                    </div>
+                </form>
+
+                <!-- Success Confirmation Message (Hidden by default) -->
+                <div id="formSuccessMessage" class="form-success-card hidden">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Consultation Requested!</h3>
+                    <p>Thank you, <strong id="submittedName">Client</strong>. One of our senior credit specialists will reach out to you within 15 minutes.</p>
+                    <div class="next-steps-box">
+                        <p><strong>Immediate Next Step:</strong> Keep your phone nearby. We'll be calling from <strong>(800) 555-0199</strong>.</p>
+                    </div>
+                    <button onclick="resetForm()" class="btn btn-secondary btn-sm" style="margin-top: 15px;">Submit Another Request</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credit Bureau Direct Integration Section -->
+    <section class="trust-bar-section">
+        <div class="container">
+            <div class="trust-header text-center">
+                <span class="trust-badge-label"><i class="fa-solid fa-bolt"></i> AUTOMATED DISPUTE NETWORK</span>
+                <h2>Direct Disputing With All 3 Major Bureaus</h2>
+                <p>We submit electronic challenge letters directly into bureau databases for maximum deletion speeds under FCRA guidelines.</p>
+            </div>
+
+            <div class="bureau-cards-grid">
+                <!-- Equifax Card -->
+                <div class="bureau-hero-card equifax-theme">
+                    <div class="bureau-card-top">
+                        <div class="bureau-logo-box">
+                            <span class="bureau-brand-text equifax">EQUIFAX</span>
+                        </div>
+                        <span class="status-indicator online"><i class="fa-solid fa-circle"></i> Direct API Connected</span>
+                    </div>
+                    <div class="bureau-card-body">
+                        <div class="bureau-stat">
+                            <span class="stat-big">30 Days</span>
+                            <span class="stat-desc">Avg. Response Time</span>
+                        </div>
+                        <ul class="bureau-features">
+                            <li><i class="fa-solid fa-shield-check"></i> Automated e-OSCAR disputing</li>
+                            <li><i class="fa-solid fa-shield-check"></i> Hard inquiry & collections sweep</li>
+                            <li><i class="fa-solid fa-shield-check"></i> 100% FCRA § 611 compliant</li>
+                        </ul>
+                    </div>
+                    <div class="bureau-card-footer">
+                        <span>Success Rate: <strong>97.8%</strong></span>
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    </div>
+                </div>
+
+                <!-- Experian Card -->
+                <div class="bureau-hero-card experian-theme">
+                    <div class="bureau-card-top">
+                        <div class="bureau-logo-box">
+                            <span class="bureau-brand-text experian">Experian</span>
+                        </div>
+                        <span class="status-indicator online"><i class="fa-solid fa-circle"></i> Real-Time Sync</span>
+                    </div>
+                    <div class="bureau-card-body">
+                        <div class="bureau-stat">
+                            <span class="stat-big">28 Days</span>
+                            <span class="stat-desc">Avg. Deletion Window</span>
+                        </div>
+                        <ul class="bureau-features">
+                            <li><i class="fa-solid fa-shield-check"></i> Charge-off & late payment removal</li>
+                            <li><i class="fa-solid fa-shield-check"></i> Identity error resolution</li>
+                            <li><i class="fa-solid fa-shield-check"></i> Real-time client portal tracking</li>
+                        </ul>
+                    </div>
+                    <div class="bureau-card-footer">
+                        <span>Success Rate: <strong>98.9%</strong></span>
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    </div>
+                </div>
+
+                <!-- TransUnion Card -->
+                <div class="bureau-hero-card transunion-theme">
+                    <div class="bureau-card-top">
+                        <div class="bureau-logo-box">
+                            <span class="bureau-brand-text transunion">TransUnion.</span>
+                        </div>
+                        <span class="status-indicator online"><i class="fa-solid fa-circle"></i> Priority Queue</span>
+                    </div>
+                    <div class="bureau-card-body">
+                        <div class="bureau-stat">
+                            <span class="stat-big">25 Days</span>
+                            <span class="stat-desc">Fastest Expedited Dispute</span>
+                        </div>
+                        <ul class="bureau-features">
+                            <li><i class="fa-solid fa-shield-check"></i> Public record & lien expungement</li>
+                            <li><i class="fa-solid fa-shield-check"></i> Creditor verification challenge</li>
+                            <li><i class="fa-solid fa-shield-check"></i> Direct Metro 2 format disputing</li>
+                        </ul>
+                    </div>
+                    <div class="bureau-card-footer">
+                        <span>Success Rate: <strong>98.1%</strong></span>
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Credit Score Potential Simulator -->
+    <section class="simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-wand-magic-sparkles"></i> AI SCORE CALCULATOR</span>
+                <h2>Estimate Your Score Potential</h2>
+                <p>Drag the slider or click a preset score to simulate how fast our legal dispute engine can boost your credit standing.</p>
+            </div>
+
+            <div class="simulator-card">
+                <!-- Preset Score Quick Chips -->
+                <div class="preset-chips-container">
+                    <span class="chip-label">Quick Select:</span>
+                    <button class="preset-chip" onclick="setScorePreset(480)">480 (Severe Bad)</button>
+                    <button class="preset-chip active" onclick="setScorePreset(540)">540 (Poor Credit)</button>
+                    <button class="preset-chip" onclick="setScorePreset(620)">620 (Fair Credit)</button>
+                    <button class="preset-chip" onclick="setScorePreset(670)">670 (Good Credit)</button>
+                </div>
+
+                <div class="sim-controls">
+                    <div class="slider-header">
+                        <label for="scoreSlider">Your Current Credit Score: <span id="currentScoreValue" class="highlight-score">540</span></label>
+                        <span id="scoreTierBadge" class="tier-badge tier-poor">POOR CREDIT</span>
+                    </div>
+                    
+                    <div class="range-slider-wrapper">
+                        <input type="range" id="scoreSlider" min="450" max="750" value="540" class="slider" oninput="updateSimulator(this.value)">
+                        <div class="slider-track-progress" id="sliderProgress"></div>
+                    </div>
+
+                    <div class="slider-ticks">
+                        <span>450 (Deep Repair)</span>
+                        <span>550 (Poor)</span>
+                        <span>650 (Fair)</span>
+                        <span>750 (Good)</span>
+                    </div>
+                </div>
+
+                <!-- Primary Goal Selector Tabs -->
+                <div class="goal-tabs-container">
+                    <label class="goal-label">What is your main financial goal?</label>
+                    <div class="goal-tabs">
+                        <button class="goal-tab active" onclick="selectGoal(this, 'home')"><i class="fa-solid fa-house"></i> Buy a House</button>
+                        <button class="goal-tab" onclick="selectGoal(this, 'auto')"><i class="fa-solid fa-car"></i> Auto Financing</button>
+                        <button class="goal-tab" onclick="selectGoal(this, 'card')"><i class="fa-solid fa-credit-card"></i> 0% APR Cards</button>
+                        <button class="goal-tab" onclick="selectGoal(this, 'loan')"><i class="fa-solid fa-briefcase"></i> Business Loan</button>
+                    </div>
+                </div>
+
+                <div class="sim-results-grid">
+                    <div class="sim-gauge-box">
+                        <div class="gauge-container">
+                            <div class="gauge-circle">
+                                <div class="gauge-inner">
+                                    <span class="potential-label">Projected Score</span>
+                                    <span id="projectedScoreValue" class="projected-score">715</span>
+                                    <span id="projectedGain" class="point-gain">+175 Points Boost</span>
+                                </div>
+                            </div>
+                            <div class="gauge-target-badge"><i class="fa-solid fa-bullseye"></i> Goal Qualified!</div>
+                        </div>
+                    </div>
+
+                    <div class="sim-details-box">
+                        <div class="sim-details-header">
+                            <h4>Targeted Deletions & Enhancements:</h4>
+                            <span class="est-time-pill"><i class="fa-solid fa-clock"></i> Est. Time: <strong id="estTimeText">90-120 Days</strong></span>
+                        </div>
+                        
+                        <ul class="sim-item-list" id="simItemList">
+                            <li><i class="fa-solid fa-circle-check text-success"></i> Charge-offs & Collection Disputes</li>
+                            <li><i class="fa-solid fa-circle-check text-success"></i> 30/60/90 Day Late Cleanup</li>
+                            <li><i class="fa-solid fa-circle-check text-success"></i> Medical Debt & Unverified Bills</li>
+                            <li><i class="fa-solid fa-circle-check text-success"></i> Utilization Ratio Re-balancing</li>
+                        </ul>
+                        
+                        <div class="sim-cta">
+                            <a href="#lead-form-section" class="btn btn-primary btn-block">
+                                <span>Unlock This Projected Score</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Proof Section (Requested: "drop 1-2 landing pages you've built") -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">OUR WORK & TEMPLATES</span>
+                <h2>Landing Pages We've Built</h2>
+                <p>Check out our previous high-converting landing page designs crafted for credit repair agency partners.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Landing Page 1 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">High Conversion Template #1</div>
+                    <div class="portfolio-img-container">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mockup-url">https://creditfix-pro.example.com</span>
+                        </div>
+                        <div class="mockup-preview preview-1">
+                            <div class="mockup-hero">
+                                <div class="mockup-tag">FINANCIAL FREEDOM</div>
+                                <div class="mockup-title">Remove Negatives In 30 Days</div>
+                                <div class="mockup-btn">Get Free Audit</div>
+                            </div>
+                            <div class="mockup-stats-bar">
+                                <div><b>780+</b> Avg Score</div>
+                                <div><b>99%</b> Disputes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>CreditFix Pro - Mortgage Focused Landing Page</h3>
+                        <p>Designed specifically for clients looking to qualify for home loans. Includes automated mortgage calculator integration and direct lender trust signals.</p>
+                        <div class="portfolio-tags">
+                            <span>Lead Capture</span>
+                            <span>Mortgage Leads</span>
+                            <span>High CTR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing Page 2 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">High Conversion Template #2</div>
+                    <div class="portfolio-img-container">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mockup-url">https://elevatecredit.example.com</span>
+                        </div>
+                        <div class="mockup-preview preview-2">
+                            <div class="mockup-hero">
+                                <div class="mockup-tag">ATTORNEY BACKED</div>
+                                <div class="mockup-title">FCRA Compliant Credit Repair</div>
+                                <div class="mockup-btn alt">Start 90-Day Challenge</div>
+                            </div>
+                            <div class="mockup-stats-bar">
+                                <div><b>15K+</b> Deletions</div>
+                                <div><b>4.9★</b> Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Elevate Credit - Premium VIP Client Funnel</h3>
+                        <p>A sleek dark-mode aesthetic for high-income individuals looking to eliminate credit errors and unlock high-limit credit cards and business funding.</p>
+                        <div class="portfolio-tags">
+                            <span>VIP Funnel</span>
+                            <span>Dark Mode</span>
+                            <span>Credit Score Simulator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Step Process Section -->
+    <section class="process-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">SIMPLE & TRANSPARENT</span>
+                <h2>How Our Credit Repair Process Works</h2>
+                <p>We handle all the legal paperwork, bureau disputes, and creditor negotiations for you.</p>
+            </div>
+
+            <div class="process-steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Free Credit Audit</h3>
+                    <p>We pull your 3-bureau reports and pinpoint all inaccurate, misleading, or unverified negative items hurting your score.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <h3>Custom Legal Disputes</h3>
+                    <p>Our credit attorneys issue customized legal challenge letters directly to Equifax, Experian, TransUnion, and your creditors under FCRA laws.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>Watch Scores Rise</h3>
+                    <p>Track your items get deleted in real-time through your client portal and watch your credit score jump higher month over month!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Proof Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">REAL RESULTS</span>
+                <h2>What Our Clients Say</h2>
+                <p>Read inspiring success stories from real people who rebuilt their credit with Apex Credit.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Apex Credit raised my score from 530 to 710 in just 4 months! I was able to get approved for my dream house with a 4.2% interest rate. Life changing service!"
+                    </p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">DS</div>
+                        <div>
+                            <div class="reviewer-name">David S.</div>
+                            <div class="reviewer-meta">Approved for Mortgage • Raised +180 Points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "They removed 5 old collection accounts and 3 late payments that weren't even mine. The customer service team kept me updated every step of the way."
+                    </p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">MR</div>
+                        <div>
+                            <div class="reviewer-name">Maria R.</div>
+                            <div class="reviewer-meta">5 Collections Deleted • Raised +145 Points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "I was skeptical at first, but after seeing 3 items fall off in the first 30 days, I became a true believer. Highly recommend their 90-day guarantee!"
+                    </p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">JT</div>
+                        <div>
+                            <div class="reviewer-name">James T.</div>
+                            <div class="reviewer-meta">Business Financing • Raised +110 Points</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">GOT QUESTIONS?</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about credit repair and our guarantee.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item active">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is credit repair legal?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, 100%! Credit repair is completely legal under federal law (Fair Credit Reporting Act - FCRA, 15 U.S.C. § 1681). You have the legal right to challenge any inaccurate, incomplete, or unverified information on your credit reports.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How quickly will I see results?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many of our clients begin seeing initial deletions and point increases within 30 to 45 days of starting their disputes. Full credit repair programs generally take 3 to 6 months depending on report complexity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What items can you help remove?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We can challenge collections, charge-offs, late payments, medical bills, repossessions, bankruptcies, tax liens, hard inquiries, and identity theft errors.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is your 90-Day Guarantee?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If we are unable to get any erroneous items deleted or improved on your credit report within your first 90 days of service, you are entitled to a 100% refund of your service fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Sticky/CTA Banner -->
+    <section class="cta-banner">
+        <div class="container text-center">
+            <h2>Ready to Fix Your Credit & Secure Your Financial Future?</h2>
+            <p>Don't let bad credit hold you back from home ownership, better rates, and peace of mind.</p>
+            <a href="#lead-form-section" class="btn btn-primary btn-lg">
+                <span>Claim Your Free Credit Audit Now</span>
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+            <div class="cta-guarantee-note">
+                <i class="fa-solid fa-shield-cat"></i> No risk • Free consultation • Cancel anytime
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span class="logo-text">APEX<span>CREDIT</span></span>
+                </a>
+                <p>Apex Credit Repair provides industry-leading credit correction services nationwide. Helping clients restore credit integrity under FCRA guidelines.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#simulator">Credit Simulator</a></li>
+                    <li><a href="#portfolio">Our Portfolio</a></li>
+                    <li><a href="#reviews">Client Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Collection Removal</a></li>
+                    <li><a href="#">Late Payment Cleanup</a></li>
+                    <li><a href="#">Mortgage Credit Prep</a></li>
+                    <li><a href="#">Bankruptcy Credit Repair</a></li>
+                    <li><a href="#">Identity Theft Disputes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal & Compliance</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">CROA Disclosures</a></li>
+                    <li><a href="#">Money Back Guarantee</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Apex Credit Repair Inc. All rights reserved. Registered under the Credit Repair Organizations Act (CROA).</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
